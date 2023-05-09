@@ -1,13 +1,132 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("./reset.css");
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 20px;
+  background-color: #333;
+  color: #fff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.header__title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 70px;
+  text-transform: uppercase;
+}
+
+.header__nav {
+  display: flex;
+}
+
+.header__nav-list {
+  display: flex;
+  list-style: none;
+}
+
+.header__nav-item {
+  margin-right: 20px;
+}
+
+.header__nav-item a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header__nav-item a:hover {
+  background-color: #007bff;
+}
+
+/* Banner */
+.banner {
+  background-color: #f2f2f2;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.banner__title {
+  font-size: 36px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.banner__text {
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.banner__buttons {
+  display: flex;
+}
+
+.banner__button {
+  font-size: 16px;
+  padding: 10px ;
+  letter-spacing: 0.2px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.banner__button--primary {
+  background-color: #007bff;
+  color: #fff;
+  width: 100px;
+  height: 50px;
+}
+
+.banner__button--secondary {
+  background-color: transparent;
+  border: 2px solid #007bff;
+  color: #007bff;
+  width: 100px;
+}
+
+.banner__button:hover {
+  background-color: #007bff67;
+  color: #fff;
+}
+
+.banner__button--secondary:hover {
+  background-color: #007bff67;
+  color: #fff;
+}
+
+/* Gallery */
+.gallery {
+  margin-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: calc(100vh - 337px - 60px);
+  overflow: hidden;
+}
+
+.gallery__image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #ccc;
+}
+
+/* footer */
+.footer {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
 }
